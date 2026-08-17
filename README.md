@@ -5,7 +5,6 @@ course.
 
 - [Student course book](https://petelevasseur.com/guiding-rust/)
 - [Training resources](https://petelevasseur.com/training/)
-- Workshop snapshot: `workshop-2026-08-19`
 
 Use this repository as a GitHub template for your pair, or clone it directly.
 The provided empty library compiles; your first deliverable is the
