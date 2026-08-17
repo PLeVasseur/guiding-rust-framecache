@@ -1,0 +1,79 @@
+# framecache: shared SignalDb fixture (simplified DBC), used room-wide.
+# Signals are little-endian unsigned bitfields:
+#   value = raw * scale + offset
+
+[[message]]
+id = 0x100
+name = "Powertrain"
+
+  [[message.signal]]
+  name = "EngineSpeed"
+  start_bit = 0
+  length = 16
+  scale = 0.25
+  offset = 0.0
+  unit = "rpm"
+
+  [[message.signal]]
+  name = "ThrottlePos"
+  start_bit = 16
+  length = 8
+  scale = 0.4
+  offset = 0.0
+  unit = "%"
+
+[[message]]
+id = 0x1A5
+name = "Chassis"
+
+  [[message.signal]]
+  name = "VehicleSpeed"
+  start_bit = 0
+  length = 16
+  scale = 0.01
+  offset = 0.0
+  unit = "km/h"
+
+  [[message.signal]]
+  name = "BrakePressure"
+  start_bit = 16
+  length = 12
+  scale = 0.05
+  offset = 0.0
+  unit = "bar"
+
+  [[message.signal]]
+  name = "SteeringAngle"
+  start_bit = 28
+  length = 14
+  scale = 0.1
+  offset = -819.2
+  unit = "deg"
+
+[[message]]
+id = 0x2B0
+name = "Battery"
+
+  [[message.signal]]
+  name = "PackVoltage"
+  start_bit = 0
+  length = 10
+  scale = 0.5
+  offset = 0.0
+  unit = "V"
+
+  [[message.signal]]
+  name = "PackCurrent"
+  start_bit = 10
+  length = 12
+  scale = 0.1
+  offset = -204.8
+  unit = "A"
+
+  [[message.signal]]
+  name = "CellTempMax"
+  start_bit = 22
+  length = 8
+  scale = 0.5
+  offset = -40.0
+  unit = "C"
